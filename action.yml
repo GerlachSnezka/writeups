@@ -1,6 +1,11 @@
 name: Writeups
 description: Syncing
 
+inputs:
+  token:
+    description: "GitHub token"
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -8,7 +13,7 @@ runs:
       uses: actions/checkout@v4
       with:
         repository: GerlachSnezka/writeups
-        token: ${{ secrets.GH_ACCESS_TOKEN }}
+        token: ${{ inputs.token }}
         path: out
 
     - run: |

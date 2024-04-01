@@ -22,6 +22,7 @@ runs:
       shell: bash
 
     - name: Commit and push
+      shell: bash
       run: |
         cd out/
         git config user.name github-actions[bot]

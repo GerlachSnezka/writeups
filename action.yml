@@ -20,6 +20,7 @@ runs:
       shell: bash
       run: |
         cd out/
+        ls
         ./update.sh
         git config user.name github-actions[bot]
         git config user.email 41898282+github-actions[bot]@users.noreply.github.com

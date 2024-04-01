@@ -1,4 +1,4 @@
-name: Sync with website
+name: Sync website
 on:
   push:
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Checkout writeups repository
+      - name: Checkout website repository
         uses: actions/checkout@v4
         with:
           repository: GerlachSnezka/gerlachsnezka.github.io
@@ -18,9 +18,8 @@ jobs:
           path: out
 
       - name: Commit and push
-        shell: bash
+        working-directory: out
         run: |
-          cd out/
           ./make.sh
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com

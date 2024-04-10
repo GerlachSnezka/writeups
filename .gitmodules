@@ -1,3 +1,6 @@
 [submodule "utctf"]
 	path = utctf
 	url = https://github.com/GerlachSnezka/utctf.git
+[submodule "amateursctf"]
+	path = amateursctf
+	url = https://github.com/GerlachSnezka/amateursctf
